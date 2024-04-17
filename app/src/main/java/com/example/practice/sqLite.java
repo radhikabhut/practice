@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 public class sqLite extends SQLiteOpenHelper {
 
     private static final String DB_NAME= "STUD";
-    private static final String TABLE_STUD = "STUD-TBL";
+    private static final String TABLE_STUD = "STUD_TBL";
     private static final String KEY_ID= "ID";
     private static final String KEY_NAME= "NAME";
     private static final String KEY_NO= "NO";
@@ -22,8 +22,8 @@ public class sqLite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE "+ TABLE_STUD +"(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , "+ KEY_NAME +  " TEXT, "+ KEY_NO + " INTEGER "+")");
-
+        db.execSQL("CREATE TABLE "+ TABLE_STUD +"(" +KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , "+ KEY_NAME +  " TEXT ,"+ KEY_NO+" INTEGER )");
+db.close();
     }
 
     public  void insert(String name,int no){
